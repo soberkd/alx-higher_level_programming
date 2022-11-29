@@ -2,5 +2,6 @@
 
 alph = 97
 while alph <= 122:
-    print(chr(alph), end = '')
+    char = chr(alph)
+    print("{}".format(char), end ="")
     alph += 1
