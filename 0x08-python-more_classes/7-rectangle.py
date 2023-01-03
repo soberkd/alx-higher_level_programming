@@ -52,9 +52,9 @@ class Rectangle:
             return string
         for x in range(0, self.__height):
             if x != self.__height - 1:
-                string = string + Rectangle.print_symbol * self.__width + "\n"
+                string = string + str(self.print_symbol) * self.__width + "\n"
             else:
-                string = string + Rectangle.print_symbol * self.__width
+                string = string + str(self.print_symbol) * self.__width
         return string
 
     def __repr__(self):
