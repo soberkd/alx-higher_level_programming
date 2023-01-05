@@ -7,6 +7,8 @@ these numbers can be integers of floats,
 if the numbers are floats they are converted ti integers.
 
 """
+
+
 def add_integer(a, b=98):
     """Add two numbers"""
     if type(a) is not int and type(a) is not float:
