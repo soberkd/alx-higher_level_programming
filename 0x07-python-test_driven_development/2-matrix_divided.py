@@ -2,6 +2,7 @@
 
 """A module that divides all elements of a matrix"""
 
+
 def matrix_divided(matrix, div):
     """Divides all elements of a matrix.
     Args:
@@ -43,4 +44,4 @@ def matrix_divided(matrix, div):
         len_e = len(elems)
 
     m = list(map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix))
-    return (m)   
+    return (m)
