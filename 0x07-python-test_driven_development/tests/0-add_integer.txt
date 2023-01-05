@@ -12,6 +12,15 @@ Test cases
 	>>> add_integer(3, 6)
 	9
 
+	>>> add_integer(10.0, 15.0)
+	25
+
+	>>> add_integer(-1, 15)
+        14
+
+	>>> add_integer(5, -15)
+        -10
+
 	>>> add_integer()
 	Traceback (most recent call last):
 	TypeError: add_integer() missing 1 required positional argument: 'a'
@@ -24,4 +33,14 @@ Test cases
         Traceback (most recent call last):
         TypeError: a must be an integer
 
+	>>> add_integer(None, 2)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
 
+	>>> add_integer(3, None)
+        Traceback (most recent call last):
+        TypeError: b must be an integer
+
+	>>> add_integer(5, 1e400)
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
