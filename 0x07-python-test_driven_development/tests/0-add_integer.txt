@@ -21,6 +21,13 @@ Test cases
 	>>> add_integer(5, -15)
         -10
 
+	>>> add_integer(5)
+	103
+
+	>>> add_integer(0, float('nan'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
+
 	>>> add_integer()
 	Traceback (most recent call last):
 	TypeError: add_integer() missing 1 required positional argument: 'a'
