@@ -26,9 +26,14 @@ Now test:
 	:
 	<BLANKLINE>
 
-	>>> text_indentation(None)
+	>>> text_indentation(8)
 	Traceback (most recent call last):
 	TypeError: text must be a string
 
 	>>> text_indentation("   \n")
 	<BLANKLINE>
+
+	>>> text_indentation()
+	Traceback (most recent call last):
+	TypeError: text_indentation() missing 1 require positional argument: 'text'
+
