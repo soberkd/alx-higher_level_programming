@@ -19,4 +19,4 @@ class Rectangle(BaseGeometry):
 
     def area(self):
         """ I want to understand """
-        return self.__height * self.
+        return self.__height * self.__width
