@@ -1,15 +1,10 @@
 #!/usr/bin/python3
-""" My class module
-"""
+"""returns object for json serialization"""
 
 
-class MyClass:
-    """ My class
-    """
-
-    def __init__(self, name):
-        self.name = name
-        self.number = 0
-
-    def __str__(self):
-        return "[MyClass] {} - {:d}".format(self.name, self.number)
+def class_to_json(obj):
+    """a function to serialize obj"""
+    my_dict = {}
+    for key, value in obj.__dict__.items():
+        my_dict[key] = value
+    return my_dict
