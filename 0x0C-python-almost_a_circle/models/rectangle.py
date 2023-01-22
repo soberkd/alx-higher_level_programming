@@ -6,10 +6,10 @@ This class inherits from Base
 import json
 from models.base import Base
 
+
 class Rectangle(Base):
     """This is a class Rectangle inherits from Base
     """
-
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """This is initializing a rectangle instance
@@ -17,7 +17,7 @@ class Rectangle(Base):
             - __width: width
             - __height: height
             - __x: x
-            - __y: y 
+            - __y: y
             - id
         """
 
@@ -26,7 +26,7 @@ class Rectangle(Base):
         self.x = x
         self.y = y
         super().__init__(id)
-    
+
     @property
     def width(self):
         """Retrieves the width attribute."""
@@ -90,35 +90,36 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
-    
+
     def area(self):
         """This function calculate the area of the Rectangle instance
         Return the area
         """
 
         return self.width * self.height
-    
+
     def display(self):
         """It prints in stdout the Rectangle instance with the character #"""
 
         for y in range(0, self.__y):
             print()
-        
+
         for i in range(0, self.__height):
             for x in range(0, self.__x):
                 print(" ", end="")
             for j in range(0, self.__width):
                 print("#", end="")
             print()
-    
+
     def __str__(self):
         """It returns a string representation of the Rectangle instance"""
 
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
-    
+        return "[Rectangle] ({}) {}/{} - {}/{}".forma\
+            t(self.id, self.__x, self.__y, self.__width, self.__height)
+
     def update(self, *args, **kwargs):
         """It assigns an argument to each attribute
-        
+
         Args:
             - id attribute
             - width attribute
@@ -154,10 +155,14 @@ class Rectangle(Base):
                     self.x = value
                 if key == "y":
                     self.y = value
-    
-    def to_dictionary(self):
-        """ It update the class Rectangle and returns the dictionary representation of a Rectangle"""
 
-        my_dict = {"id": self.id, "width": self.__width, "height": self.__height, "x": self.__x, "y": self.__y}
+    def to_dictionary(self):
+        """ It update the class Rectangle and returns the dictionary"""
+
+        my_dict = {"id": self.id,
+                   "width": self.__width,
+                   "height": self.__height,
+                   "x": self.__x,
+                   "y": self.__y}
 
         return my_dict
